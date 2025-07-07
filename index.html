@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Кедровый дар</title>
+  <link href="assest/css/main.css" rel="stylesheet" />
+  <link href="/assest/images/logo.png" rel="icons" />
+</head>
+
+<body>
+  <section id="banner">
+    <div class="banner-top">
+      <div class="logo">
+        <img alt="logo" src="assest/images/logo_header.png" />
+      </div>
+      <div class="contact" style="margin: 0;">
+        <div class="contact-content">
+          <img alt="phone_icon" src="assest/images/icons/phone.png" />
+          <a href="tel:+7 (902) 706-77-77">
+            +7 (902) 706-77-77
+          </a>
+        </div>
+        <p>
+          Режим работы с 10:00 до 02:00
+        </p>
+      </div>
+    </div>
+    <div class="banner-content">
+      <h1>
+        Кедровый дар
+      </h1>
+      <p>
+        Настоящий отдых для тела и души! Русские бани на дровах и
+        расслабляющее фурако ждут вас. Погрузитесь в атмосферу уюта и
+        восстановления.
+      </p>
+      <a href="#bathhouses">
+        ЗАБРОНИРОВАТЬ БАНЮ
+      </a>
+    </div>
+  </section>
+  <section class="main" id="bathhouses">
+    <div class="title">
+      <img alt="title-pattern-left" src="assest/images/icons/title-pattern-left.png" />
+      <h2>
+        Выберите подходящую баню
+      </h2>
+      <img alt="title-pattern-right" src="assest/images/icons/title-pattern-right.png" />
+    </div>
+    <div class="panels">
+      <div class="panel active">
+        Большая двинская баня
+      </div>
+      <div class="panel">
+        Большая кедровая баня
+      </div>
+      <div class="panel">
+        Малая двинская баня
+      </div>
+      <div class="panel">
+        Малая кедровая баня
+      </div>
+      <div class="panel">
+        Русская баня-бочка
+      </div>
+    </div>
+    <div class="bathhouse">
+      <img alt="bathhouse-image" id="bathhouse-image" src="assest/images/bathhouses-info/bolshaya_dvinskaya_1.jpg" />
+      <div class="bathhouse-info">
+        <h3 id="bathhouse-title">
+          Большая двинская баня
+        </h3>
+        <div class="bathhouse-description-container">
+          <p id="bathhouse-description">
+          </p>
+          <div class="prices">
+            <button id="openModalBtn" type="button">
+              ЗАБРОНИРОВАТЬ
+            </button>
+            <div class="price">
+              <span id="weekdays">
+              </span><br>
+              <span>
+                Пн-Чт
+              </span>
+            </div>
+            <div class="price">
+              <span id="weekends">
+              </span><br>
+              <span>
+                Пт(после 17:00)-Вс + праздники
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-labelledby="modalTitle" aria-modal="true" class="modal" id="modal" role="dialog">
+      <div class="modal__container" role="document">
+        <div class="title">
+          <img alt="title-pattern-left" loading="lazy" src="assest/images/icons/title-pattern-left.png">
+          <h3>
+            Забронировать баню
+          </h3>
+          <img alt="title-pattern-right" loading="lazy" src="assest/images/icons/title-pattern-right.png">
+          </img>
+          </img>
+        </div>
+        <button aria-label="Закрыть модальное окно" class="modal__close" id="closeModalBtn">
+          <svg aria-hidden="true" focusable="false" height="32" viewbox="0 0 32 32" width="32">
+            <line stroke="#353535" stroke-width="2" x1="8" x2="24" y1="8" y2="24">
+            </line>
+            <line stroke="#353535" stroke-width="2" x1="24" x2="8" y1="8" y2="24">
+            </line>
+          </svg>
+        </button>
+        <div class="modal__body">
+          <div class="modal__img-block">
+            <div class="slider-track" id="sliderTrack">
+              <img alt="" class="slider-image" loading="lazy" src="" />
+              <img alt="" class="slider-image" loading="lazy" src="" />
+              <img alt="" class="slider-image" loading="lazy" src="" />
+              <img alt="" class="slider-image" loading="lazy" src="" />
+              <img alt="" class="slider-image" loading="lazy" src="" />
+            </div>
+            <button aria-label="Назад" class="modal__arrow modal__arrow--left" id="prevSlide">
+              <svg height="32" viewbox="0 0 32 32" width="32">
+                <polyline fill="none" points="20,8 12,16 20,24" stroke="#fff" stroke-width="2">
+                </polyline>
+              </svg>
+            </button>
+            <button aria-label="Вперёд" class="modal__arrow modal__arrow--right" id="nextSlide">
+              <svg height="32" viewbox="0 0 32 32" width="32">
+                <polyline fill="none" points="12,8 20,16 12,24" stroke="#fff" stroke-width="2">
+                </polyline>
+              </svg>
+            </button>
+          </div>
+          <form id="bathhouse-form" class="modal__form">
+            <p class="modal__form-desc">
+              Оставьте заявку и мы с Вами свяжемся
+            </p>
+            <div class="modal__input-group">
+              <img aria-hidden="true" class="modal__icon" loading="lazy" src="assest/images/icons/user.svg" />
+              <input aria-label="Введите имя" name="name" placeholder="Введите имя" required type="text" />
+            </div>
+            <div class="modal__input-group">
+              <img aria-hidden="true" class="modal__icon" loading="lazy" src="assest/images/icons/phone_form.svg" />
+              <input aria-label="Введите телефон" name="phone" placeholder="+7 (999) 999-99-99" required type="tel" />
+            </div>
+            <button class="modal__submit" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main" id="gallery">
+    <div class="title">
+      <img alt="title-pattern-left" loading="lazy" src="assest/images/icons/title-pattern-left.png">
+      <h2>
+        Фотографии банного комплекса
+      </h2>
+      <img alt="title-pattern-right" loading="lazy" src="assest/images/icons/title-pattern-right.png">
+      </img>
+      </img>
+    </div>
+    <div class="gallery-images">
+      <div class="gallery-image">
+        <img alt="gallery-image" class="gallery-photo" loading="lazy" src="assest/images/gallery/gallery-1.jpg" />
+      </div>
+      <div class="gallery-image">
+        <img alt="gallery-image" class="gallery-photo" loading="lazy" src="assest/images/gallery/gallery-2.jpg" />
+      </div>
+      <div class="gallery-image">
+        <img alt="gallery-image" class="gallery-photo" loading="lazy" src="assest/images/gallery/gallery-3.jpg" />
+      </div>
+      <div class="gallery-image">
+        <img alt="gallery-image" class="gallery-photo" loading="lazy" src="assest/images/gallery/gallery-4.jpg" />
+      </div>
+      <div class="gallery-image">
+        <img alt="gallery-image" class="gallery-photo" loading="lazy" src="assest/images/gallery/gallery-5.jpg" />
+      </div>
+      <div class="gallery-image">
+        <img alt="gallery-image" class="gallery-photo" loading="lazy" src="assest/images/gallery/gallery-6.jpg" />
+      </div>
+    </div>
+    <div id="lightbox" style="display:none;">
+      <div class="lightbox-overlay">
+      </div>
+      <button class="nav-btn" id="prevBtn">
+        ‹
+      </button>
+      <img alt="zoomed image" id="lightbox-img" loading="lazy" src="" />
+      <button class="nav-btn" id="nextBtn">
+        ›
+      </button>
+      <button class="close-btn" id="closeBtn">
+        ×
+      </button>
+    </div>
+    <button id="more-images" type="button">
+      Смотреть еще
+      <img alt="more" loading="lazy" src="assest/images/icons/arrow-more.png" />
+    </button>
+  </section>
+  <section class="main" id="steamer">
+    <div class="title">
+      <img alt="title-pattern-left" src="assest/images/icons/title-pattern-left.png" />
+      <h2>Пар-мастер</h2>
+      <img alt="title-pattern-right" src="assest/images/icons/title-pattern-right.png" />
+    </div>
+
+    <div class="steamer-content">
+      <div class="steamer-image">
+        <img alt="parilshik" loading="lazy" src="assest/images/parilshik.jpg" />
+      </div>
+      <div class="steamer-text">
+        <p>
+          Пар-мастер помогает гостям расслабиться и не беспокоиться об организации банного отдыха. Он управляет
+          процедурой от начала и до конца: Подготавливает парную; Выясняет, как чувствуют себя гости и что ожидают от
+          отдыха в бане; Управляет уровнем пара; Выбирает и подготавливает веники.Парит подходящей техникой.
+        </p>
+        <p>
+          При заказе парения - скидка на веники 20%. Для парения необходимо приобрести комплект веников (2 дубовых и 2
+          пихтовых). Комплект веников может быть использован на несколько человек.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="main" id="certificate">
+    <div class="title">
+      <img alt="title-pattern-left" src="assest/images/icons/title-pattern-left.png" />
+      <h2 style="margin: 0;">
+        Подарочный сертификат
+      </h2>
+      <img alt="title-pattern-right" src="assest/images/icons/title-pattern-right.png" />
+    </div>
+    <div class="certificate-content">
+      <div class="certificate-image">
+        <img alt="certificate" loading="lazy" src="assest/images/certificate.jpg" />
+      </div>
+      <div class="certificate-info">
+        <div class="certificate-text">
+          <p>
+            Подарочный сертификат в банный комплекс «Кедровый дар» - это идеальный подарок для ваших близких и друзей,
+            который подарит им незабываемый отдых и заботу о здоровье. Вы можете выбрать сертификат на сумму 3000, 5000,
+            8000 или 10 000 рублей - удобный вариант для любого бюджета.
+          </p>
+        </div>
+        <button id="openCertModalBtn" type="button">
+          ПРИОБРЕСТИ
+        </button>
+      </div>
+    </div>
+    <div class="modal" id="certModal">
+      <div class="modal__container">
+        <button class="modal__close" id="closeCertModalBtn">
+          <svg focusable="false" height="32" viewbox="0 0 32 32" width="32">
+            <line stroke="#353535" stroke-width="2" x1="8" x2="24" y1="8" y2="24">
+            </line>
+            <line stroke="#353535" stroke-width="2" x1="24" x2="8" y1="8" y2="24">
+            </line>
+          </svg>
+        </button>
+        <div class="title">
+          <img alt="title-pattern-left" loading="lazy" src="assest/images/icons/title-pattern-left.png">
+          <h3>
+            Приобретите сертификат
+          </h3>
+          <img alt="title-pattern-right" loading="lazy" src="assest/images/icons/title-pattern-right.png">
+          </img>
+          </img>
+        </div>
+        <div class="modal__body">
+          <div class="modal__img-block-cert">
+            <img alt="certificate" loading="lazy" src="assest/images/certificate.jpg" />
+          </div>
+          <form class="modal__form" id="cert-form">
+            <p class="modal__form-desc">
+              Оставьте заявку и мы с Вами свяжемся
+            </p>
+            <div class="modal__input-group">
+              <img aria-hidden="true" class="modal__icon" loading="lazy" src="assest/images/icons/user.svg" />
+              <input aria-label="Введите имя" name="name" placeholder="Введите имя" required="" type="text" />
+            </div>
+            <div class="modal__input-group">
+              <img aria-hidden="true" class="modal__icon" loading="lazy" src="assest/images/icons/phone_form.svg" />
+              <input aria-label="Введите телефон" name="phone" placeholder="+7 (999) 999-99-99" required=""
+                type="tel" />
+            </div>
+            <button class="modal__submit" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main" id="price-lists">
+    <div class="title">
+      <img src="assest/images/icons/title-pattern-left.png" alt="title-pattern-left" />
+      <h2>Прайс - листы</h2>
+      <img src="assest/images/icons/title-pattern-right.png" alt="title-pattern-right" />
+    </div>
+
+    <div class="price-lists-content">
+      <div class="price-list-container">
+        <h3 style="font-style: normal;">Прайс бани</h3>
+        <div class="price-section-title">Русская баня</div>
+        <div class="price-row"><span>Будни</span><span>1200 ₽/час</span></div>
+        <div class="price-row"><span>Пятница после 17:00 и выходные</span><span>1400 ₽/час</span></div>
+        <hr>
+        <div class="price-section-title">Малая кедровая баня</div>
+        <div class="price-row"><span>Будни</span><span>1500 ₽/час</span></div>
+        <div class="price-row"><span>Пятница после 17:00 и выходные</span><span>1700 ₽/час</span></div>
+        <hr>
+        <div class="price-section-title">Малая двинская баня</div>
+        <div class="price-row"><span>Будни</span><span>1700 ₽/час</span></div>
+        <div class="price-row"><span>Пятница после 17:00 и выходные</span><span>2000 ₽/час</span></div>
+        <hr>
+        <div class="price-section-title">Большая кедровая баня</div>
+        <div class="price-row"><span>Будни</span><span>2200 ₽/час</span></div>
+        <div class="price-row"><span>Пятница после 17:00 и выходные</span><span>2500 ₽/час</span></div>
+        <hr>
+        <div class="price-section-title">Большая двинская баня</div>
+        <div class="price-row"><span>Будни</span><span>2200 ₽/час</span></div>
+        <div class="price-row"><span>Пятница после 17:00 и выходные</span><span>2500 ₽/час</span></div>
+        <div class="price-note">
+          Минимальный сеанс 2 часа. За доп. людей доплата 500 ₽ с человека за все время пребывания
+          <p class="price-section-title" style="font-style: normal; font-weight: 700;">Купель фурако 4500 ₽ за всё
+            время пребывания</p>
+          <span class="price-note">Минимальный сеанс бани + фурако 3 часа</span>
+        </div>
+      </div>
+
+      <div class="price-list-container">
+        <h3 style="font-style: normal;">Прайс услуг</h3>
+        <div class="price-row"><span>Использование своих добавок в фурако</span><span>2000 ₽</span></div>
+        <div class="price-row"><span>Фурако с пихтой</span><span>7000 ₽</span></div>
+        <div class="price-row"><span>Фурако с цитрусами</span><span>7000 ₽</span></div>
+        <div class="price-row"><span>Фурако с цитрусами и пихтой</span><span>8500 ₽</span></div>
+        <div class="price-row"><span>Холодная купель</span><span>3000 ₽</span></div>
+        <div class="price-note" style="margin-bottom:12px; width: 70%; align-self:center;">
+          Оплачивается единовременно за все время пребывания
+        </div>
+        <hr>
+        <div class="price-row"><span>Стандартное парение 20 мин</span><span>1500 ₽</span></div>
+        <div class="price-row"><span>Экспресс - парение 15 мин</span><span>1200 ₽</span></div>
+        <div class="price-small" style="margin-bottom:12px;">
+          Предварительная запись<br>
+        </div>
+        <div class="price-note" style="margin-bottom:12px; align-self:center;">
+          Для парения необходимо дополнительно приобрести комплект веников - 1200 ₽. Можно использовать на несколько
+          человек
+        </div>
+
+        <hr>
+        <div class="price-row"><span>Веник дубовый / березовый</span><span>450/350 ₽</span></div>
+        <div class="price-row"><span>Шапка для парения</span><span>250 ₽</span></div>
+        <div class="price-row"><span>Шапка для парения с логотипом</span><span>450 ₽</span></div>
+        <div class="price-row"><span>Уголь для мангала 10л/20</span><span>300/500 ₽</span></div>
+        <div class="price-row"><span>Чай 1 литр (чёрный, зелёный)</span><span>150 ₽</span></div>
+        <div class="price-row"><span>Набор одноразовой посуды</span><span>250 ₽</span></div>
+        <hr>
+        <div class="price-section-title">Аренда</div>
+        <div class="price-row"><span>Полотенце / Простынь</span><span>250/150 ₽</span></div>
+        <div class="price-row"><span>Решетка для мангала</span><span>250 ₽</span></div>
+        <div class="price-row"><span>Набор шампуров</span><span>200 ₽</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="main" id="rules">
+    <div class="title">
+      <img alt="title-pattern-left" loading="lazy" src="assest/images/icons/title-pattern-left.png">
+      <h2>
+        Уважаемые гости!
+      </h2>
+      <img alt="title-pattern-right" loading="lazy" src="assest/images/icons/title-pattern-right.png">
+      </img>
+      </img>
+    </div>
+    <div class="rules-content">
+      <div class="rules-info">
+        <p>
+          В нашем комлпексе запрещено
+        </p>
+        <ul>
+          <li>
+            Купание в реке
+          </li>
+          <li>
+            Курение сигарет в помещении
+          </li>
+          <li>
+            Курение кальяна на территории комплекса
+          </li>
+          <li>
+            Проведение грязевых процедур (скрабы/глина)
+          </li>
+          <li>
+            Мешать другим гостям отдыхать
+          </li>
+          <li>
+            Лить на камни иную жидкость, кроме горячей воды
+          </li>
+          <li>
+            Посещение с животными
+          </li>
+          <li>
+            Вставать/садиться на крышку фурако
+          </li>
+          <li>
+            Запускать салюты/фейерверки на территории комплекса
+          </li>
+        </ul>
+        <p style="font-style: italic;">
+          В случае нарушения, Ваш сеанс заканчивается незамедлительно
+        </p>
+      </div>
+      <div class="rules-image">
+        <img alt="attention" loading="lazy" src="assest/images/attention.png" />
+      </div>
+    </div>
+  </section>
+  <section class="main" id="reviews">
+    <div class="title">
+      <img alt="title-pattern-left" loading="lazy" src="assest/images/icons/title-pattern-left.png">
+      <h2>
+        Отзывы
+      </h2>
+      <img alt="title-pattern-right" loading="lazy" src="assest/images/icons/title-pattern-right.png">
+      </img>
+      </img>
+    </div>
+    <div class="reviews-content">
+      <div class="reviews-info">
+        <p>
+          Банный комплекс «Кедровый дар» неизменно получает высокие оценки и положительные отзывы от наших гостей на
+          ведущих площадках и специализированных сервисах. Мы искренне гордимся каждой вашей обратной связью и
+          внимательно изучаем все комментарии, чтобы постоянно улучшать качество наших услуг. Ваше мнение — это важный
+          источник вдохновения для нашей команды, который помогает нам становиться лучше и создавать ещё более
+          комфортную и уютную атмосферу для отдыха. Мы всегда рады слышать ваши впечатления, предложения и пожелания,
+          ведь именно благодаря вам мы можем развиваться и радовать вас на самом высоком уровне. Благодарим за доверие и
+          надеемся, что каждый ваш визит в «Кедровый дар» будет наполнен теплом, уютом и незабываемыми впечатлениями!
+        </p>
+      </div>
+      <div class="reviews-links">
+        <a class="review" target="_blank"
+          href="https://yandex.ru/maps/20/arkhangelsk/?ll=40.541607%2C64.568582&amp;mode=poi&amp;poi%5Bpoint%5D=40.541599%2C64.568558&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D232476289757&amp;tab=reviews&amp;z=17">
+          <div class="review-content" style="justify-content: start;">
+            <img alt="yandex" loading="lazy" src="assest/images/icons/yandex.png" />
+            <div class="rating">
+              <img alt="star" loading="lazy" src="assest/images/icons/star.png" />
+              <span>5.0</span>
+            </div>
+          </div>
+          <span class="review-link">Больше отзывов в Яндекс</span>
+        </a>
+
+        <a class="review" target="_blank"
+          href="https://2gis.ru/arkhangelsk/firm/70000001048016108/40.541645%2C64.568562/tab/reviews?m=40.5418%2C64.568509%2F20%2Fp%2F45%2Fr%2F0&amp;immersive=on">
+          <div class="review-content">
+            <img alt="2gis" loading="lazy" src="assest/images/icons/2gis.png" />
+            <div class="rating">
+              <img alt="star" loading="lazy" src="assest/images/icons/star.png" />
+              <span>4.8</span>
+            </div>
+          </div>
+          <span class="review-link">Больше отзывов в 2ГИС</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="main" id="contacts">
+    <div class="contacts-content">
+      <div class="contacts-info">
+        <div class="title" style="justify-content: start;">
+          <h2 style="margin: 0;">
+            Контакты
+          </h2>
+        </div>
+        <div class="contact">
+          <div class="contact-content">
+            <img alt="phone_icon" loading="lazy" src="assest/images/icons/phone-black.png">
+            <a href="tel:+7 (902) 706-77-77" style="color: var(--main-text);">
+              +7 (902) 706-77-77
+            </a>
+            </img>
+          </div>
+          <p style="color: var(--main-text);">
+            Режим работы с 10:00 до 02:00
+          </p>
+        </div>
+        <address style="color: var(--main-text);">
+          <img alt="map-marker" loading="lazy" src="assest/images/icons/map-marker.png" />
+          <span>
+            Набережная Северной Двины, 140с1/2
+          </span>
+        </address>
+        <div class="social">
+          <a target="_blank" href="https://vk.com/kedrdar29">
+            <img alt="vk_icon" loading="lazy" src="assest/images/icons/vk_icon.png" />
+          </a>
+          <a target="_blank" href="https://www.instagram.com/kedrdar29/">
+            <img alt="instagram-icon" loading="lazy" src="assest/images/icons/instargram.png" />
+          </a>
+          <p>
+            Признан экстремистской организацией и запрещен на территории РФ
+          </p>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;">
+        <a href="https://yandex.ru/maps/org/kedrovy_dar/232476289757/?utm_medium=mapframe&amp;utm_source=maps"
+          style="color:#eee;font-size:12px;position:absolute;top:0px;">
+          Кедровый дар
+        </a>
+        <a href="https://yandex.ru/maps/20/arkhangelsk/category/bathhouse/35325140238/?utm_medium=mapframe&amp;utm_source=maps"
+          style="color:#eee;font-size:12px;position:absolute;top:14px;">
+          Баня в Архангельске
+        </a>
+        <iframe allowfullscreen="true" frameborder="0" height="400"
+          src="https://yandex.ru/map-widget/v1/?ll=40.541607%2C64.568582&amp;mode=poi&amp;poi%5Bpoint%5D=40.541599%2C64.568558&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D232476289757&amp;z=17"
+          style="position:relative; border:0; border-radius: 25px;" width="560">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-top">
+      <nav>
+        <a class="footer-navigate" href="#bathhouses">
+          Забронировать баню
+        </a>
+        <a class="footer-navigate" href="#gallery">
+          Галерея
+        </a>
+        <a class="footer-navigate" href="#price-lists">
+          Прайс лист
+        </a>
+        <a class="footer-navigate" href="#rules">
+          Правила посещения
+        </a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <img alt="logo" loading="lazy" src="assest/images/logo_header.png" />
+        <p>
+          © 2025. Все права защищены
+        </p>
+      </div>
+      <div class="footer-bottom-center">
+        <p>
+          Документы
+        </p>
+        <p id="openRekvModalBtn">
+          Реквизиты
+        </p>
+        <p>
+          Политика конфиденциальности
+        </p>
+      </div>
+      <div class="footer-bottom-right">
+        <p>
+          Контакты
+        </p>
+        <a href="tel:+7 (902) 706-77-77">
+          +7 (902) 706-77-77
+        </a>
+        <p>
+          WhatsApp, Telegram
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="rekvModal">
+      <div class="modal__container">
+        <button class="modal__close" id="closeRekvModalBtn">
+          <svg focusable="false" height="32" viewbox="0 0 32 32" width="32">
+            <line stroke="#353535" stroke-width="2" x1="8" x2="24" y1="8" y2="24">
+            </line>
+            <line stroke="#353535" stroke-width="2" x1="24" x2="8" y1="8" y2="24">
+            </line>
+          </svg>
+        </button>
+        <div class="title">
+          <h3 style="color: black;">
+            Реквизиты
+          </h3>
+        </div>
+        <div class="modal__body">
+          <p>
+            Наименование организации: ООО «Кедровый дар»
+            <br />
+            ИНН: 290106805167
+            <br />
+            ОГРН: 315290100002150
+            <br />
+            Расчётный счёт: 40802810600001335504
+            <br />
+            Наименование банка: АО «ТБанк»
+            <br />
+            БИК банка: 044525974
+            <br />
+            ИНН банка: 7710140679
+            <br>
+            Корреспондентский счёт: 30101810145250000974
+            <br />
+            Юридический адрес банка: 127287, г. Москва, ул. Хуторская 2-я, д. 38А, стр. 26
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assest/script/main.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="assest/script/order.js"></script>
+</body>
+
+</html>
